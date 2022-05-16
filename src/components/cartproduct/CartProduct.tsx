@@ -19,15 +19,15 @@ const CartProducts:FC<CartProductProps> = ({
   const total = (count * price).toFixed(2);
 
   const removeProduct = () => {
-    dispatch(removeItem(title));
+    dispatch(removeItem(id));
   };
 
   const increaseProductQuantity = () => {
-    dispatch(increaseItemQuantity(title));
+    dispatch(increaseItemQuantity(id));
   };
 
   const decreaseProductQuantity = () => {
-    dispatch(DecreaseItemQuantity(title));
+    dispatch(DecreaseItemQuantity(id));
   };
 
   return (

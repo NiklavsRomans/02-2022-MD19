@@ -8,21 +8,16 @@ const shoppingCartSlice = createSlice({
   initialState: newState,
   reducers: {
     addToCart: (state, action):any => {
-      if (state.some((product) => product.id === action.payload.id)) {
+      if (state.find((item) => item.id === action.payload.id)) {
         return (
-          state.map((item) => {
-            if (item.title === action.payload.title) {
-              return { ...item, count: item.count + 1 };
-            }
-            return item;
-          })
+          state.map((item) => ({ ...item }))
         );
       }
       return [...state, action.payload];
     },
     increaseItemQuantity: (state, action) => (
       state.map((item) => {
-        if (item.title === action.payload) {
+        if (item.id === action.payload.id) {
           return { ...item, count: item.count + 1 };
         }
         return item;
@@ -30,14 +25,14 @@ const shoppingCartSlice = createSlice({
     ),
     DecreaseItemQuantity: (state, action) => (
       state.map((item) => {
-        if (item.title === action.payload) {
+        if (item.id === action.payload.id) {
           return { ...item, count: item.count - 1 };
         }
         return item;
       })
     ),
     removeItem: (state, action) => (
-      state.filter((item) => item.title !== action.payload)
+      state.filter((item) => item.id !== action.payload.id)
     ),
   },
 });
