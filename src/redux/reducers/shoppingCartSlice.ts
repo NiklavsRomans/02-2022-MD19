@@ -7,7 +7,7 @@ const shoppingCartSlice = createSlice({
   name: 'shopItems',
   initialState: newState,
   reducers: {
-    addToCart: (state, action):any => {
+    addToCart: (state, action) => {
       if (state.find((item) => item.id === action.payload.id)) {
         return (
           state.map((item) => ({ ...item }))
@@ -15,6 +15,7 @@ const shoppingCartSlice = createSlice({
       }
       return [...state, action.payload];
     },
+
     increaseItemQuantity: (state, action) => (
       state.map((item) => {
         if (item.id === action.payload.id) {

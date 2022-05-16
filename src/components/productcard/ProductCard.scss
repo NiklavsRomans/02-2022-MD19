@@ -1,8 +1,26 @@
 
-
 .products__card {
-    border: 2px solid beige;
+    border: 2px solid rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
 }
 
+
+.products__card--buttons {
+    padding: 20px;
+}
+
+.item__cart--btn {
+    padding: 5px 25px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.products__card--button--add {
+    padding: 5px 50px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
