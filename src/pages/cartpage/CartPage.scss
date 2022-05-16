@@ -1,0 +1,16 @@
+.shopping__cart--list {
+    display: grid;
+    grid-template-columns: min-content 1fr max-content min-content;
+    column-gap: 25px;
+    align-items: center;
+    align-content: stretch;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.shopping__cart--total {
+    display: flex;
+    justify-content: end;
+    padding: 50px;
+    font-size: 36px;
+}

@@ -1,0 +1,13 @@
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+    padding-top: 50px; 
+}
+
+.products__card--wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 30px;
+}
+

@@ -1,0 +1,12 @@
+.item__cart--btn {
+    padding: 3px 20px;
+    cursor: pointer;
+}
+
+.quantity {
+    padding: 0px 10px;
+}
+
+.item__cart--btn:disabled {
+    cursor: not-allowed
+}
